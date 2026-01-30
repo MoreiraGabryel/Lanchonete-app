@@ -1,6 +1,6 @@
 # Lanchonete App
 
-Projeto backend em Spring Boot com front-end em Thymeleaf para uma lachonete: cardápio, pedidos e admin.
+Projeto backend em Spring Boot com front-end em Thymeleaf para uma lanchonete: cardápio, pedidos e admin.
 
 ## Visão rápida
 - **Stack:** Java + Spring Boot, Thymeleaf, JPA (H2 para dev, PostgreSQL para produção)
