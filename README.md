@@ -16,4 +16,4 @@ Requisitos: Java, Graphviz, plantuml.jar.
 2. Torne o script executável:
 ```bash
 chmod +x scripts/generate-diagram.sh
-Copyright (c) 2026 Marcos. All rights reserved. Nenhuma parte deste código  pode ser reproduzida (exceto a vizualização do Diagrama), distribuída ou transmitida sem a autorização prévia do autor.
+
