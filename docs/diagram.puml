@@ -1,0 +1,52 @@
+@startuml
+class User {
+  +Long id
+  +String name
+  +String email
+  +String passwordHash
+  +Role role
+  +boolean active
+}
+
+enum Role { CUSTOMER, ADMIN }
+
+class Category {
+  +Long id
+  +String name
+  +String description
+}
+
+class MenuItem {
+  +Long id
+  +String name
+  +String description
+  +BigDecimal price
+  +String imageUrl
+  +boolean available
+}
+
+class Order {
+  +Long id
+  +LocalDateTime createdAt
+  +OrderStatus status
+  +BigDecimal total
+  +String deliveryAddress
+  +PaymentStatus paymentStatus
+}
+
+enum OrderStatus { CREATED, CONFIRMED, PREPARING, READY, DELIVERED, CANCELLED }
+enum PaymentStatus { PENDING, PAID, FAILED }
+
+class OrderItem {
+  +Long id
+  +int quantity
+  +BigDecimal unitPrice
+  +BigDecimal subtotal()
+}
+
+User "1" -- "0..*" Order
+Category "1" -- "0..*" MenuItem
+MenuItem "1" -- "0..*" OrderItem
+Order "1" -- "0..*" OrderItem
+OrderItem "*" -- "1" MenuItem
+@enduml
